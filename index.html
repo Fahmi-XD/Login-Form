@@ -1,176 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <title>Login Form</title>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <title>Login Form</title>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="library/bootstrap.min.css" />
+    <link rel="stylesheet" href="vendor/style.css" />
+</head>
 
-        <!-- Custom Styles -->
-        <link rel="stylesheet" href="library/bootstrap.min.css" />
-        <link rel="stylesheet" href="vendor/style.css" />
-    </head>
-
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav"
-                    aria-controls="navbarNav"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav text-center ms-auto">
-                        <li class="nav-item">
-                            <a
-                                class="nav-link active"
-                                aria-current="page"
-                                href="#"
-                                >Login</a
-                            >
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Register</a>
-                        </li>
-                    </ul>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
+                                                                                                                                    aria-expanded="false"
+                                                                                                                                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav text-center ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container box-blur">
+        <form class="login">
+            <h2>Login</h2>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control text-light" id="email" placeholder="Example: maman@gmail.com" required />
+            </div>
+            <div class="mb-3">
+                <label for="inputPassword5" class="form-label">Password</label>
+                <input type="password" id="inputPassword5" class="form-control text-light" required />
+            </div>
+            <div class="hor text-center">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Ingat Sandi
+                    </label>
+                </div>
+                <p>
+                    <a class="link-opacity-75-hover" id="reg">Register</a>
+                </p>
+            </div>
+            <div class="mb-3 btt">
+                <input class="btn btn-primary" type="submit" name="btn" id="btn" value="Login" />
+            </div>
+        </form>
+        
+        <form class="register">
+            <h2>Register</h2>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="text-light form-control" id="name" required />
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control text-light" id="email" placeholder="name@example.com" required />
+            </div>
+            <div class="mb-3">
+                <label for="inputPassword5" class="form-label">Password</label>
+                <input type="password" id="inputPassword5" class="form-control text-light" aria-describedby="passwordHelpBlock"
+                                                                                                                                        required />
+                <div id="passwordHelpBlock" class="form-text text-light">
+                    Your password must be 8-20 characters long, contain
+                    letters and numbers, and must not contain spaces,
+                    special characters, or emoji.
                 </div>
             </div>
-        </nav>
+            <div class="mb-3 btt">
+                <input class="btn btn-primary" type="submit" name="btn" id="btn" value="Register" />
+            </div>
+            <div class="hor text-center">
+                <p>
+                    <a class="link-opacity-75-hover" id="log">Sudah punya akun? Login</a>
+                </p>
+            </div>
+        </form>
+    </div>
+    
+    <script src="library/bootstrap.bundle.min.js" type="application/javascript" charset="utf-8"></script>
+    <script src="library/jquery.min.js" type="application/javascript" charset="utf-8"></script>
+    <script src="vendor/main.js" type="application/javascript" charset="utf-8"></script>
+</body>
 
-        <div class="container box-blur">
-            <form class="login">
-                <h2>Login</h2>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input
-                        type="email"
-                        class="form-control"
-                        id="email"
-                        placeholder="Example: maman@gmail.com"
-                        required
-                    />
-                </div>
-                <div class="mb-3">
-                    <label for="inputPassword5" class="form-label"
-                        >Password</label
-                    >
-                    <input
-                        type="password"
-                        id="inputPassword5"
-                        class="form-control"
-                        required
-                    />
-                </div>
-                <div class="hor text-center">
-                    <div class="form-check">
-                        <input
-                            class="form-check-input"
-                            type="checkbox"
-                            value=""
-                            id="flexCheckDefault"
-                        />
-                        <label class="form-check-label" for="flexCheckDefault">
-                            Ingat Sandi
-                        </label>
-                    </div>
-                    <p>
-                        <a class="link-opacity-75-hover" id="reg">Register</a>
-                    </p>
-                </div>
-                <div class="mb-3 btt">
-                    <input
-                        class="btn btn-primary"
-                        type="submit"
-                        name="btn"
-                        id="btn"
-                        value="Login"
-                    />
-                </div>
-            </form>
-
-            <form class="register">
-                <h2>Register</h2>
-                <div class="mb-3">
-                    <label for="name" class="form-label">Name</label>
-                    <input
-                        type="text"
-                        class="form-control"
-                        id="name"
-                        required
-                    />
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input
-                        type="email"
-                        class="form-control"
-                        id="email"
-                        placeholder="name@example.com"
-                        required
-                    />
-                </div>
-                <div class="mb-3">
-                    <label for="inputPassword5" class="form-label"
-                        >Password</label
-                    >
-                    <input
-                        type="password"
-                        id="inputPassword5"
-                        class="form-control"
-                        aria-describedby="passwordHelpBlock"
-                        required
-                    />
-                    <div id="passwordHelpBlock" class="form-text text-light">
-                        Your password must be 8-20 characters long, contain
-                        letters and numbers, and must not contain spaces,
-                        special characters, or emoji.
-                    </div>
-                </div>
-                <div class="mb-3 btt">
-                    <input
-                        class="btn btn-primary"
-                        type="submit"
-                        name="btn"
-                        id="btn"
-                        value="Register"
-                    />
-                </div>
-                <div class="hor text-center">
-                    <p>
-                        <a class="link-opacity-75-hover" id="log"
-                            >Sudah punya akun? Login</a
-                        >
-                    </p>
-                </div>
-            </form>
-        </div>
-        
-        <footer class="footer">
-            <h3>Made by Fahmi XD with Bootstrap and Jquery</h3>
-        </footer>
-
-        <script
-            src="library/bootstrap.bundle.min.js"
-            type="application/javascript"
-            charset="utf-8"
-        ></script>
-        <script
-            src="library/jquery.min.js"
-            type="application/javascript"
-            charset="utf-8"
-        ></script>
-        <script
-            src="vendor/main.js"
-            type="application/javascript"
-            charset="utf-8"
-        ></script>
-    </body>
 </html>
