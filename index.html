@@ -93,6 +93,16 @@
         </form>
     </div>
     
+    <script type="application/javascript">
+    (() => {
+    fetch('https://dashboard-api-production-4fce.up.railway.app/api/hit?types=web1', {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        }
+    })
+})();
+    </script>
     <script src="library/bootstrap.bundle.min.js" type="application/javascript" charset="utf-8"></script>
     <script src="library/jquery.min.js" type="application/javascript" charset="utf-8"></script>
     <script src="vendor/main.js" type="application/javascript" charset="utf-8"></script>
